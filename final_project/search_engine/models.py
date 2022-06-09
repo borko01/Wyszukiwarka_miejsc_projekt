@@ -1,8 +1,9 @@
 from django.db import models
 
+
 # Create your models here.
 class District(models.Model):
-    name = models.CharField(max_length=64),
+    name = models.TextField
 
 
 CATEGORY = (
@@ -16,12 +17,15 @@ CATEGORY = (
 COOKING = (
     (1, 'Włoska'),
     (2, 'Kebab'),
-    (3,'Sushi'),
+    (3, 'Sushi'),
     (4, 'Chińska'),
     (5, 'Burger')
 )
+
+
 class Type(models.Model):
     cat = models.IntegerField(choices=CATEGORY)
+
 
 class Food(models.Model):
     cuisine = models.IntegerField(choices=COOKING)
