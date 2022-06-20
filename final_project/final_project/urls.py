@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from search_engine.views import MainPage, formpage
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('mainpage', MainPage.as_view()),
+    path('form', formpage),
 ]

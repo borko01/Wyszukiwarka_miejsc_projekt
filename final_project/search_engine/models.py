@@ -28,7 +28,7 @@ class Type(models.Model):
 
 
 class Food(models.Model):
-    cuisine = models.IntegerField(choices=COOKING)
+    cuisine = models.IntegerField(choices=COOKING, null=True)
 
 
 KIND = (
@@ -40,7 +40,7 @@ KIND = (
 
 
 class Sport(models.Model):
-    kind = models.IntegerField(choices=KIND)
+    kind = models.IntegerField(choices=KIND, null=True)
 
 
 class Place(models.Model):
