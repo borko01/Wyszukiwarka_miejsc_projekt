@@ -3,12 +3,22 @@ from django.views import View
 from .models import Place, Sport, Food, Type, District
 from django.http import HttpRequest, Http404, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth import models
 
 
 # Create your views here.
 class MainPage(View):
     def get(self, request):
         return render(request, "main_page.html")
+
+#widok dla zalogowanego użytkownika, create superuser, jest model w Django użytkownika
+#usunąć migrations i zrobić jeszcze makemigrations
+#widok dla każdej dany wyszukanej
+#dodać z 2 miejsca
+#nad widokami dodać dokumentacje
+#jeden test
+#usunąć sqlite
+#na nowo zrobić bazę danych
 
 
 @csrf_exempt
@@ -34,3 +44,4 @@ def formpage(request):
         return HttpResponse(html)
     else:
         return render(request, 'form.html')
+

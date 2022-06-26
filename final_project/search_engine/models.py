@@ -1,9 +1,9 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 
 # Create your models here.
 class District(models.Model):
-    name = models.TextField
+    name = models.TextField()
 
 
 CATEGORY = (
@@ -47,7 +47,7 @@ class Place(models.Model):
     type = models.ForeignKey(Type, on_delete=models.CASCADE),
     district = models.ForeignKey(District, on_delete=models.CASCADE),
     name = models.CharField(max_length=128),
-    address = models.TextField,
+    address = models.TextField(),
     food = models.ForeignKey(Food, on_delete=models.CASCADE, null=True)
     sport = models.ForeignKey(Sport, on_delete=models.CASCADE, null=True)
 
