@@ -6,13 +6,7 @@ class District(models.Model):
     name = models.TextField()
 
 
-CATEGORY = (
-    (1, 'Kino'),
-    (2, 'Teatr'),
-    (3, 'Restauracja'),
-    (4, 'Pub'),
-    (5, 'Sport')
-)
+
 
 COOKING = (
     (1, 'Włoska'),
@@ -24,7 +18,7 @@ COOKING = (
 
 
 class Type(models.Model):
-    cat = models.IntegerField(choices=CATEGORY)
+    cat = models.CharField(max_length=128)
 
 
 class Food(models.Model):
@@ -44,11 +38,9 @@ class Sport(models.Model):
 
 
 class Place(models.Model):
-    type = models.ForeignKey(Type, on_delete=models.CASCADE),
-    district = models.ForeignKey(District, on_delete=models.CASCADE),
-    name = models.CharField(max_length=128),
-    address = models.TextField(),
+    type = models.ForeignKey(Type, on_delete=models.CASCADE)
+    district = models.ForeignKey(District, on_delete=models.CASCADE)
+    name = models.CharField(max_length=128)
+    address = models.TextField()
     food = models.ForeignKey(Food, on_delete=models.CASCADE, null=True)
     sport = models.ForeignKey(Sport, on_delete=models.CASCADE, null=True)
-
-

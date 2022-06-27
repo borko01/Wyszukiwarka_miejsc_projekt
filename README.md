@@ -1,9 +1,13 @@
 Aplikacja ma na celu pomóc wyszukać dany rodzaj miejsca z konkretnej dzielnicy Warszawy.
 
-Użytkownik oprócz wyszukania danego miejsca ma możliwosć dodania swojej propozycji miejsca poprzez formularz, 
-gdzie miejsce zostanie dodany do bazy danych.
+Zwykły użytkownik oprócz wyszukania danego miejsca
 
-Utworzony superuser. Dostęp przez `'/user'`.
+Utworzony superuser. Dostęp przez `'/admin'`.
 Dane logowania:
-login: `'user'`
+login: `'aleksandra'`
 passoword: `'superuser'`
+
+Utworzony zwykły użytkownik (po zalogowaniu jest możliwość dodania nowego miejsca do bazy danych):
+login: `'darth.vader'`
+hasło: `'padme'`
+

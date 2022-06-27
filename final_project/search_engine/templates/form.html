@@ -6,16 +6,9 @@
 </head>
 <body>
 <form method="POST">
-{% csrf_token %}
   <label for="type">Rodzaj miejsca:</label><br>
-  <select name="type" id="type">
-  <option value="0"> </option>
-  <option value="1">Kino</option>
-  <option value="2">Teatr</option>
-  <option value="3">Restauracja</option>
-  <option value="4">Pub</option>
-  <option value="5">Sport</option>
-</select><br>
+  <input type="text" id=type" name="type">
+  <br>
   <label for="name">Nazwa:</label><br>
   <input type="text" id="name" name="name"><br>
   <label for="district">Dzielnica:</label><br>
@@ -24,20 +17,15 @@
   <input type="text" id="address" name="address"><br>
   <label for="cuisine">Rodzaj kuchni:</label><br>
   <select name="cuisine" id="cuisine">
-  <option value="0"> </option>
-  <option value="1">Włoska</option>
-  <option value="2">Kebab</option>
-  <option value="3">Sushi</option>
-  <option value="4">Chińska</option>
-  <option value="5">Burger</option>
+   {% for foods in food %}
+            <option value="{{ food.id }}">{{ food.cuisine }}</option>
+        {% endfor %}
 </select><br>
   <label for="sport">Rodzaj sportowego obiektu:</label><br>
   <select name="sport" id="sport">
-  <option value="0"> </option>
-  <option value="1">Basen</option>
-  <option value="2">Siłownia</option>
-  <option value="3">Studio fitenss</option>
-  <option value="4">Kort</option>
+  {% for sports in sport %}
+            <option value="{{ sport.id }}">{{ sport.kind }}</option>
+        {% endfor %}
 </select><br><br>
   <button type="submit">Dodaj</button>
 </form>
