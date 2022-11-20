@@ -4,6 +4,8 @@ Application is searching special places(by category) in specific district of War
 
 Technologies:
 - Python
+- Django
+- PostgreSQL
 
 
 Superuser created `'/admin'`.
