@@ -1,13 +1,14 @@
-Aplikacja ma na celu pomóc wyszukać dany rodzaj miejsca z konkretnej dzielnicy Warszawy.
+Project "Places search engine"
 
-Zwykły użytkownik oprócz wyszukania danego miejsca
+Application is searching special places(by category) in specific district of Warsaw. You can find there places like restaurants, pubs, cinemas etc, also if you'ra logged in you can add place.
 
-Utworzony superuser. Dostęp przez `'/admin'`.
-Dane logowania:
+
+Superuser created `'/admin'`.
+Log in data:
 login: `'aleksandra'`
 passoword: `'superuser'`
 
-Utworzony zwykły użytkownik (po zalogowaniu jest możliwość dodania nowego miejsca do bazy danych):
+User created (after log in you can add new places to data base):
 login: `'darth.vader'`
 hasło: `'padme'`
 
