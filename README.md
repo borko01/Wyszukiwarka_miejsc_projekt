@@ -2,6 +2,9 @@ Project "Places search engine"
 
 Application is searching special places(by category) in specific district of Warsaw. You can find there places like restaurants, pubs, cinemas etc, also if you'ra logged in you can add place.
 
+Technologies:
+- Python
+
 
 Superuser created `'/admin'`.
 Log in data:
